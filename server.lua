@@ -6,3 +6,5 @@ RegisterNetEvent('eagles_medecin:paiement', function ()
     print(Config.itempoursoigner)
     ox_inventory:RemoveItem(playerId,Config.itempoursoigner,Config.prixmedecin)
 end)
+
+lib.versionCheck('Julien34s/Eagles_Medecin')
