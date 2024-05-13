@@ -25,10 +25,9 @@ end)
 medecinPed = function()
     local pedModel = Config.ped.pedModel
 
-    -- Chargez le modèle de ped
     RequestModel(pedModel)
     while not HasModelLoaded(pedModel) do
-        Wait(500) -- Attendre que le modèle soit chargé
+        Wait(500) 
     end
 
     local pos = Config.ped.coords
@@ -64,10 +63,6 @@ RegisterNetEvent('eagles_medecin:soin', function ()
                 title = 'Se soigner',
                 description = 'Soin coutant',
                 icon = 'suitcase-medical',
-                -- onSelect = function()
-                --     TriggerEvent('eagles_medecin:soin')
-                -- end
-                --arrow = false,
                 event = 'eagles_medecin:soins'
             },
         },
